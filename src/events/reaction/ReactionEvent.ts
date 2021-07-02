@@ -14,6 +14,8 @@ export default class ReactionEvent extends BaseEvent {
     if(menu){
       menu.reactions.push(messageReaction)
       menu.onReaction(messageReaction)
+      await messageReaction.message.reactions.removeAll()
+      menus.splice(menus.indexOf(menu), 1)
     }
   }
 }

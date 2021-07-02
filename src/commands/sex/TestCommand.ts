@@ -12,11 +12,9 @@ export default class TestCommand extends BaseCommand {
     new ReactionMenu(message, "Do you like pringle's sex?", ['✅', '❌'],async reaction => {
       message = reaction.message
       if(reaction.emoji.name == '✅'){
-        await message.reactions.removeAll()
         await message.edit('You clicked yes')
       }
       else{
-        await message.reactions.removeAll()
         await message.edit('You clicked no')
       }
     })
