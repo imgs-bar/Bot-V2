@@ -5,7 +5,7 @@ import {ReactionMenu} from "../../utils/ReactionMenu";
 
 export default class TestCommand extends BaseCommand {
   constructor() {
-    super('sex', 'sex', []);
+    super('sex', 'sex', "test command for menus", []);
   }
 
   async run(client: DiscordClient, message: Message, args: Array<string>) {

@@ -6,7 +6,7 @@ export default class DiscordClient extends Client {
 
   private _commands = new Collection<string, BaseCommand>();
   private _events = new Collection<string, BaseEvent>();
-  private _prefix: string = '!';
+  private _prefix: string = '>';
 
   constructor(options?: ClientOptions) {
     super(options);
