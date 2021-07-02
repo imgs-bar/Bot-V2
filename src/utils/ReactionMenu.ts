@@ -16,6 +16,7 @@ export class ReactionMenu {
     content: APIMessageContentResolvable | (MessageOptions & { split?: false }) | MessageAdditions
     reactions: MessageReaction[]
     onReaction: (reaction: MessageReaction) => void;
+    creator: string
 
     constructor(originalMessage: Message, content: APIMessageContentResolvable | (MessageOptions & { split?: false }) | MessageAdditions, reactions: EmojiIdentifierResolvable[], onReaction: (reaction: MessageReaction) => void) {
         this.content = content;
@@ -23,6 +24,7 @@ export class ReactionMenu {
         this.reactions = []
         this.onReaction = onReaction
         this.emojis = reactions;
+        this.creator = originalMessage.author.id
         menus.push(this)
         this.init()
     }

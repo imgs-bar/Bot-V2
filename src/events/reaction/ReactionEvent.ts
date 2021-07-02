@@ -12,6 +12,9 @@ export default class ReactionEvent extends BaseEvent {
     if (user.bot) return;
     const menu = menus.find(value => value.messageId === messageReaction.message.id)
     if(menu){
+      if(user.id !== menu.creator){
+        return
+      }
       menu.reactions.push(messageReaction)
       menu.onReaction(messageReaction)
       await messageReaction.message.reactions.removeAll()
