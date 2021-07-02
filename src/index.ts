@@ -1,7 +1,10 @@
 import {config} from 'dotenv'
 import { registerCommands, registerEvents } from './utils/registry';
 import DiscordClient from './client/client';
-const client = new DiscordClient({});
+import disbut from 'discord-buttons'
+import {Intents} from "discord.js";
+const client = new DiscordClient();
+disbut(client)
 
 config();
 
