@@ -5,8 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
-    "discord-buttons": "https://github.com/AngeloCore/discord-buttons#dev",
-    "discord.js": "^12.5.3",
+    "discord.js": "discordjs/discord.js",
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
